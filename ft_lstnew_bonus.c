@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:15:13 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/16 10:58:41 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 12:52:50 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-/* int main ()
-{
-	char *a = "Hola, mundo";
-	t_list *newNode =ft_lstnew_bonus(a);
-	if(newNode != NULL)
-	{
-		printf("nodo creado. Content: %s\n", (char *)newNode->content);
-	} else {
-		printf("Error al crear el nodo.\n");
-	}
-	free(newNode);
-	return 0;
-} */

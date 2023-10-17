@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 11:49:02 by alicifer          #+#    #+#             */
-/*   Updated: 2023/09/29 09:21:07 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 11:42:16 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,3 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
-//int main ()
-//{
-//int c = 1;
-//printf("ft ascii %d.\n", ft_isalnum(c));
-//printf("st ascii %d.\n", isalnum(c));
-//return (0);
-//}

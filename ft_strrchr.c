@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 12:41:46 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/02 14:47:59 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 12:13:54 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	j;
+	int			j;
+	const char	*str;
 
 	j = ft_strlen(s);
+	str = s + j;
 	if ((char)c == '\0')
-		return ((char *)&s[j]);
-	j--;
-	while (j >= 0 && s[j])
+		return ((char *)str);
+	str--;
+	while (str >= s && *str)
 	{
-		if (s[j] == (char)c)
-			return ((char *)&s[j]);
-		j--;
+		if (*str == (char)c)
+			return ((char *)str);
+		str--;
 	}
 	return (NULL);
 }
-
-/* int main ()
-{
-	int c = 'l';
-	const char *s = "holala Car";
-	printf("C = %d.\n", c);
-	printf("ocurrencia %s.\n", ft_strrchr(s, c));
-	printf("ocurrencia %s.\n", strrchr(s, c));
-	
-} */

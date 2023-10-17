@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 12:12:44 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/09 13:50:41 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 12:01:41 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-/* 
-int main ()
-{
-	int c = 'l';
-	const char *s = "hola Car";
-	printf("C = %d.\n", c);
-	printf("ocurrencia %s.\n", ft_strchr(s, c));
-	printf("ocurrencia %s.\n", strchr(s, c));
-} */

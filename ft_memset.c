@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 09:33:30 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/03 11:06:51 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 11:53:39 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/* void	*ft_memset(void *str, int c, size_t len)
-{
-	unsigned char	*string;
-
-	string = (unsigned char*)str;
-	while (len-- > 0)
-		*(string++) = (unsigned char)c;
-	return (str);
-} 
-
-se utiliza para establecer un valor esp en un bloque de memoria
-para inicializar una región de memoria con un valor constante 
-establece los count caracteres de des en el car c */

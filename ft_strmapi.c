@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:15:22 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/09 12:41:34 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 12:05:29 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,27 +29,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-/* char my_function(unsigned int index, char c)
-{
-    if (index % 2 == 0)
-        return c; // Deja los caracteres en posiciones pares sin cambios
-    else
-        return c - 32; // Convierte caracteres en posiciones impares a mayúsculas
-}
-
-int main()
-{
-    const char *input = "hola mundo";
-    char *result = ft_strmapi(input, my_function);
-
-    if (result)
-    {
-        printf("Cadena original: %s\n", input);
-        printf("Cadena procesada: %s\n", result);
-        free(result); // Recuerda liberar la memoria asignada por ft_strmapi
-    }
-    else
-    {
-        printf("Error al asignar memoria.\n");
-    } */

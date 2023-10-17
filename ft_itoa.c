@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:35:47 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/09 12:09:57 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 11:49:49 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,3 @@ char	*ft_itoa(int n)
 		str[--size] = nbr + '0';
 	return (str);
 }
-/*  int main ()
-{
-	int n = 23652;
-	int size = ft_sizeint(n);
-	
-	printf("El largo del int es: %d \n", size);
-	printf("El string es: %s \n", ft_itoa(n));
-	return (0);
-}  */

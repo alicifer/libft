@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:30:47 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/10 11:08:21 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 12:01:28 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,20 +77,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (aux);
 }
-
-/* int main ()
-{
-	char const s[] = "HOLA*AMIGOS*****HOY*ES*VIERNES*POR*FIN";
-	char c = '*';
-	printf("cantidad de substrings %d.\n", ft_cntwrd(s, c));
-
-	char **aux1 = ft_split (s, c);
-	int j = 0;
-	while (aux1[j])
-	{
-		printf("Substrings Nro: %d = %s.\n", j, aux1[j]);
-		j++;
-	}
-	return (0);	
-		
-} */

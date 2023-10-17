@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 13:35:45 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/02 13:10:06 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 12:52:10 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (dstsize + ft_strlen(src));
 }
-
-/* #include<string.h>
-int main ()
-{
-	char d[] = "Hola amigos ";
-	const char s[] = "kjjjjfkkjjdfkjddddddddddddddios";
-	size_t nb = 130;
-	char d1[] = "Hola amigos ";
-	const char ds[] = "kjjjjfkkjjdfkjddddddddddddddios";
-	
-	printf("%zu\n", ft_strlcat(d, s, nb));
-	printf("%zu\n", strlcat(d1, ds, nb));
-	return (0);
-} */

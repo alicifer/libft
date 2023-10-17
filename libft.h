@@ -6,7 +6,7 @@
 /*   By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 18:41:21 by alicifer          #+#    #+#             */
-/*   Updated: 2023/10/16 16:46:48 by alicifer         ###   ########.fr       */
+/*   Updated: 2023/10/17 12:02:12 by alicifer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,23 @@ int		ft_isprint(int c);
  * @return char* la string que represente el número. NULL si falla memoria.
  */
 char	*ft_itoa(int n);
+/**
+ * @brief Fill a byte sting with a byte value.
+ * writes len bytes of value c (converted to an unsigned char) to the sting b.
+ * 
+ * @param b 
+ * @param c 
+ * @param len 
+ * @return void* 
+ */
 void	*ft_memset(void *b, int c, size_t len);
 /**
  * @brief locates the first occurrence of c (converted to unsigned char) 
  * in string s.
  * @param s string 
  * @param c int to look for
- * @param n n bytes too look for
- * @return void* returns a pointer to de byte located or NULL if dosnt exist
+ * @param n n bytes to look for
+ * @return void* returns a pointer to de byte located or NULL if doesn't exist
  */
 void	*ft_memchr(const void *s, int c, size_t n);
 /**
@@ -99,9 +108,33 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
  * @return a pointer to the dst string 
  */
 void	*ft_memmove(void *dst, const void *src, size_t len);
+/**
+ * @brief Sends the char 'c' to the specified file descriptor 
+ * 
+ * @param c Char to send
+ * @param fd File descriptor to write in
+ */
 void	ft_putchar_fd(char c, int fd);
+/**
+ * @brief Sends a string to the specified file descriptor
+ * follow by a /n
+ * @param s String to send
+ * @param fd File descriptor to write in
+ */
 void	ft_putendl_fd(char *s, int fd);
+/**
+ * @brief Sends the number n to the specified file descriptor
+ * 
+ * @param n the number
+ * @param fd file descriptor to write in
+ */
 void	ft_putnbr_fd(int n, int fd);
+/**
+ * @brief Sends a string to the specified file descriptor
+ * 
+ * @param s String to send
+ * @param fd file descriptor to write in
+ */
 void	ft_putstr_fd(char *s, int fd);
 /**
  * @brief Reserva con malloc un array de strings resultante de separar la 
@@ -123,7 +156,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 /**
  * 
- @brief Allocates sufficient memory for a copy of the string s1, does de copy,
+ @brief Allocates sufficient memory for a copy of the string s1, does the copy,
  * and returns a pointer to it.
  * @param s1 The string to be copied
  * @return char* a pointer to a new string that is duplicate of s1
@@ -144,6 +177,16 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
  * @return char* Pointer to new string
  */
 char	*ft_strjoin(const char *s1, const char *s2);
+/**
+ * @brief Copy and concatenate strings. Appends de string src to the end of
+ * dst. It will append at most dstsize - strlen (dst) -1 char. It will NULL
+ * terminates unless dstsize is 0 or the original dst string was longer than 
+ * dstsize. 
+ * @param dst String destination 
+ * @param src String source
+ * @param dstsize Max size of dst
+ * @return size_t The size that could have the string if there werent a limit
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
@@ -164,9 +207,19 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
  * @return int 
  */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+/**
+ * @brief locates the first occurrence of the null terminated string needle
+ * in the string hastack, where not more than len chars are searched. 
+ * @param haystack String to search in
+ * @param needle String to be search
+ * @param len max characters to search
+ * @return char* if needle is empty haystack is returned, if needle occurs
+ * nowhere in haystack, null is returned. Otherwise, a pointer to the first 
+ * occurrence of needle
+ */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 /**
- * @brief 
+ * @brief Locetes de last occurrence of c in the string s
  * 
  * @param s string to search
  * @param c character to search for
@@ -175,11 +228,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
  */
 char	*ft_strrchr(const char *s, int c);
 /**
- * @brief Elimina todos los caracteres de la string set desde el principio 
- * y desde  * el final de s1 hasta encontrarr un caracter no perteneciente a 
- * set. la string resultante se devuelve con una reserva de malloc
- * @param s1 la string que debe ser recortada
- * @param set los caracteres a eliminar de la string
+ * @brief Deletes all char of a string from the beggining and the back of s1 
+ * until find a char that doesn't belong to set. 
+ * The string is returned and allocated using malloc
+ * @param s1 String to be trim
+ * @param set Char to delete 
  * @return char* la string recortada. null si falla la reserva de memoria.
  */
 char	*ft_strtrim(char const *s1, char const *set);
@@ -192,7 +245,19 @@ char	*ft_strtrim(char const *s1, char const *set);
  * @return char* A pointer to the substring. Null if memory fails.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+/**
+ * @brief Converts an uppercase letter to a lower case
+ * 
+ * @param c int to converts
+ * @return int converted. if isn't a lower case returns the int unchanged.
+ */
 int		ft_tolower(int c);
+/**
+ * @brief Converts a lowercase letter to an uppercase
+ * 
+ * @param c int to converts
+ * @return int nt converted. if isn't a lower case returns the int unchanged
+ */
 int		ft_toupper(int c);
 /**
  * @brief Creates a node new in a list.
