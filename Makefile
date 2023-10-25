@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: alicifer <alicifer@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/22 16:41:38 by alicifer          #+#    #+#              #
-#    Updated: 2023/10/19 10:21:45 by alicifer         ###   ########.fr        #
+#    Created: 2023/10/19 10:58:39 by alicifer          #+#    #+#              #
+#    Updated: 2023/10/19 11:01:39 by alicifer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ SRC_B = ft_lstnew_bonus.c\
 		ft_lstiter_bonus.c\
 		ft_lstmap_bonus.c\
 
+INCLUDE = libft.h
 
 OBJS = $(SRCS:.c=.o)
 
@@ -66,7 +67,7 @@ OBJS_B = $(SRC_B:.c=.o)
 
 all:	$(NAME) 
 
-$(NAME): $(OBJS) 
+$(NAME): $(OBJS) $(INCLUDE)
 	ar crs	$(NAME) $(OBJS)
 
 %.o: %.c
